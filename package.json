@@ -1,0 +1,48 @@
+{
+  "name": "btchart",
+  "version": "1.0.0",
+  "description": "Javascript library for creating stylish and impressive charts.",
+  "main": "bundle.js",
+  "jsnext:main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "vue": "^2.2.4",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "eslint": "^3.18.0",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon-chai": "^1.2.4",
+    "lolex": "^1.6.0",
+    "mocha": "^3.2.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "sinon": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint -c config/eslint/default.json src/**/*.js tests/**/*.js",
+    "pretest": "npm run lint",
+    "test": "karma start config/karma/default.js",
+	"prebuild": "npm test",
+	"build": "rollup -c config/rollup/umd.js && rollup -c config/rollup/es6.js && rollup -c config/rollup/es5.js && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilq1994/BoomtararaCharts.git"
+  },
+  "author": "Bartosz Wilk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilq1994/BoomtararaCharts/issues"
+  },
+  "homepage": "https://github.com/wilq1994/BoomtararaCharts#readme"
+}

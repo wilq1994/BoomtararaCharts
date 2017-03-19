@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "impliedStrict": true
+        }
+    },
+    "rules": {
+        "indent": [2, "tab"],
+        "linebreak-style": [2, "unix"],
+        "quotes": [2, "single"],
+        "semi": [2, "always"],
+		"no-var": 2,
+		"prefer-const": 2,
+		"prefer-template": 2,
+		"prefer-spread": 2,
+		"prefer-rest-params": 2,
+		"prefer-arrow-callback": 2
+    }
+}
